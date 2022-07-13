@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============SCRIPTS============= -->
+    <script src="gsap.js"></script>
+    <script src="three.js"></script>
+    <!-- ============SCRIPTS============= -->
+
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Whac A Mole</title>
+</head>
+<body>
+    <div class="game">
+<div class="startBtn">
+    <div class="btn-con">
+
+        <button onclick="startGame()">Start</button>
+    </div>
+</div>
+<div class="scoreCon paddingL">
+    <h1 class="score">Your Score: <span id="score">0</span></h1>
+    <h1 class="time">
+        Time Left: <span id="time">30 <small>seconds</small></span>
+    </h1>
+</div>
+<div class="save-score paddingL" >
+    <h1 class="highest">Highest Score: <span id="high-score">0</span></h1>
+</div>
+<div class="container">
+    <div class="grid">
+        <div class="square" id="1"></div>
+        <div class="square" id="2"></div>
+        <div class="square" id="3"></div>
+        <div class="square" id="4"></div>
+        <div class="square" id="5"></div>
+        <div class="square" id="6"></div>
+        <div class="square" id="7"></div>
+        <div class="square" id="8"></div>
+        <div class="square" id="9"></div>
+        <div class="square" id="10"></div>
+        <div class="square" id="11"></div>
+        <div class="square" id="12"></div>
+
+    </div>
+</div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
