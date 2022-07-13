@@ -30,6 +30,7 @@ function addScore() {
         square.addEventListener('mousedown', () => {
             if (square.id === hitPos) {
                 result += 10
+                playSound()
 
                 customAlert('Yay', 500)
 
@@ -105,7 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     displayHighScore.textContent = savedHighScore
 })
 
-
+function playSound(){
+    let sound = document.createElement('audio')
+    sound.setAttribute('src', '../sound/correct.mp3')
+    sound.play()
+    sound.loop= false;
+}
 
 
 function customAlert(msg, duration) {
