@@ -106,6 +106,26 @@ canvas {
   color: red;
   font-size: 3.4vw;
 }
+@media (max-width: 900px) {
+  .warning {
+    font-size: 5.4vw;
+  }
+}
+@media (max-width: 600px) {
+  .warning {
+    font-size: 6.4vw;
+  }
+}
+@media (max-width: 500px) {
+  .warning {
+    font-size: 8.14vw;
+  }
+}
+@media (max-width: 500px) {
+  .warning {
+    font-size: 10.4vw;
+  }
+}
 
 .container {
   display: flex;
