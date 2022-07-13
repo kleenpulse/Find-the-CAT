@@ -47,23 +47,23 @@ let countDownTimerId
 let startBtn = document.querySelector('button')
 function startGame() {
     countDownTimerId = setInterval(countDown, 1000)
-    currentTime = 11
+    currentTime = 31
     score.textContent = 0
     startBtn.disabled = true
     startBtn.style.opacity = '.4'
     startBtn.style.cursor = 'not-allowed'
-    timerId = setInterval(randomSquare, 700)
+    timerId = setInterval(randomSquare, 500)
 }
 
 function countDown() {
     currentTime--
     timeLeft.textContent = currentTime
-if(currentTime <= 10){
-    timeLeft.classList.add('warning')
-}else{
-    timeLeft.classList.remove('warning')
+    if (currentTime <= 10) {
+        timeLeft.classList.add('warning')
+    } else {
+        timeLeft.classList.remove('warning')
 
-}
+    }
     if (currentTime <= 0) {
 
         clearInterval(countDownTimerId)
@@ -73,18 +73,18 @@ if(currentTime <= 10){
             startBtn.style.opacity = '1'
             startBtn.style.cursor = 'pointer'
             result = 0
-            
+
         }, 1000);
         setTimeout(() => {
             alert(`GameOver!!,Your Final Score is ${result} `, 2000)
-            
+
         }, 500);
         squares.forEach(square => {
             square.removeEventListener('mousedown', addScore, true)
-            
+
         })
 
-        setTimeout(updateScore, 1000)
+        setTimeout(updateScore, 500)
     }
 
 }
@@ -94,7 +94,7 @@ function updateScore() {
     if (highestScore > savedHighScore) {
         displayHighScore.textContent = highestScore
 
-       saveHighScore = localStorage.setItem('highScore', highestScore)
+        saveHighScore = localStorage.setItem('highScore', highestScore)
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -128,9 +128,9 @@ function customAlert(msg, duration) {
 }
 
 
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        // alert(`Guide: Click on the CAT (if you can) to Score! Good luck `)
+        alert(`*GUIDE: Click on the CAT (if you can) to Score! Good luck*`)
     }, 500);
 
 

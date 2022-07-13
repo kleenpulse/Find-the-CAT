@@ -189,7 +189,7 @@ canvas {
 }
 
 .mole {
-  background: url(../cat-walk.gif), var(--3d-grey);
+  background: url(../images/cat-walk.gif), var(--3d-grey);
   background-size: contain;
   transition: var(--trans);
 }/*# sourceMappingURL=style.css.map */
